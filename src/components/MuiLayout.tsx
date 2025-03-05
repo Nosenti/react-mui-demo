@@ -1,9 +1,9 @@
-import { Box, Stack, Divider, Grid2 } from '@mui/material';
+import { Box, Stack, Divider, Grid, Paper } from '@mui/material';
 import React from 'react';
 
 export default function MuiLayout() {
 	return (
-		<>
+		<Paper sx={{ p: 2, mt: 2 }} elevation={4}>
 			<Stack
 				sx={{ border: '1px solid' }}
 				direction='row'
@@ -32,28 +32,28 @@ export default function MuiLayout() {
 					p={2}
 				></Box>
 			</Stack>
-			<Grid2 container my={4}>
-				<Grid2 size={ 3}>
+			<Grid container my={4} spacing={2}>
+				<Grid item xs={3}>
 					<Box bgcolor='primary.light' p={2}>
 						Item 1
 					</Box>
-				</Grid2>
-				<Grid2 size={ 9}>
+				</Grid>
+				<Grid item xs={9}>
 					<Box bgcolor='primary.light' p={2}>
 						Item 2
 					</Box>
-				</Grid2>
-				<Grid2 size={ 9}>
+				</Grid>
+				<Grid item xs={9}>
 					<Box bgcolor='primary.light' p={2}>
 						Item 3
 					</Box>
-				</Grid2>
-				<Grid2 size={ 3}>
+				</Grid>
+				<Grid item xs={3}>
 					<Box bgcolor='primary.light' p={2}>
 						Item 4
 					</Box>
-				</Grid2>
-			</Grid2>
-		</>
+				</Grid>
+			</Grid>
+		</Paper>
 	);
 }
